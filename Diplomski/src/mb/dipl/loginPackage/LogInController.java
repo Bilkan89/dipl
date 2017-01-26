@@ -16,11 +16,10 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.control.Alert.AlertType;
 import javafx.stage.Stage;
-import javafx.stage.StageStyle;
 
 public class LogInController {
 
-	
+
 	@FXML
 	private Label hiddenLabel;
 	@FXML
@@ -29,35 +28,38 @@ public class LogInController {
 	private TextField tfUsername;
 	@FXML
 	private Button loginButton;
-	String user = "Matej";
-	String pass = "Abcd";
-	
+	String user = "M";
+	String pass = "A";
+
 	//TODO: potrebno je provjeri u bazi podataka korisnièko ime i lozinku.
-	public void loginMetoda(ActionEvent event) throws InterruptedException{
+	@FXML
+	private void loginMetoda(ActionEvent event) throws InterruptedException{
 		if(tfUsername.getText().equals(user) && passField.getText().equals(pass)){
-				
+
 			hiddenLabel.setText("Login sucess!");
 			TimeUnit.SECONDS.sleep(1);
-			
+
 			try {
-				BorderPane layoutMoj = FXMLLoader.load(Main.class.getResource("/fxml/fxml_odabir2.fxml"));
-				
-				Stage secStage = new Stage(); 
-				secStage.setFullScreen(true);
-				secStage.setResizable(false);
-				secStage.initStyle(StageStyle.UNDECORATED);
-				
+				BorderPane layoutMoj = FXMLLoader.load(Main.class.getResource("/fxml/fxml_Glavni.fxml"));
+
+				Stage secStage = new Stage();
 				Scene secScene = new Scene(layoutMoj);
+				//secScene.heightProperty().
+				secStage.setScene(secScene);
+          		//secStage.
+				//secStage.setResizable(false);
+				//secStage.setMaximized(true);
+				//secStage.initStyle(StageStyle.UNDECORATED);
 				
-				secStage.setScene(secScene);				
-				secStage.show(); 
-				
+				secStage.show();
+
 //				Stage glavni = (Stage) loginButton.getScene().getWindow();
 //				glavni.close();
-				
+
 			} catch (IOException e) {
 				e.printStackTrace();
-			}						
+			}
+			
 		}else{
 			Alert alert = new Alert(AlertType.ERROR);
 			alert.setTitle("POGREŠAN UNOS");
@@ -65,12 +67,21 @@ public class LogInController {
 			alert.showAndWait();
 		}
 	}
-	
+
 	public void closeProgram(ActionEvent event){
-		
+
 		//Platform.exit();   //odluciti koji je bolji naæin...
 		Stage stage =(Stage) loginButton.getScene().getWindow();
 		stage.close();
-		
+
 	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
 }
