@@ -1,8 +1,9 @@
-package mb.dipl.loginPackage;
+package hr.tvz.java.dipl.mb.controller;
 
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
+import hr.tvz.java.dipl.mb.glavna.Main;
 //import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -17,7 +18,7 @@ import javafx.scene.layout.BorderPane;
 import javafx.scene.control.Alert.AlertType;
 import javafx.stage.Stage;
 
-public class LogInController {
+public class LoginController {
 
 
 	@FXML

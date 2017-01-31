@@ -1,4 +1,4 @@
-package mb.dipl.komunikacija.baza;
+package hr.tvz.java.dipl.mb.baza;
 
 import java.io.FileReader;
 import java.sql.Connection;

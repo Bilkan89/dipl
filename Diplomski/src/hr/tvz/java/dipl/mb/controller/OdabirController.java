@@ -1,7 +1,8 @@
-package mb.dipl.loginPackage;
+package hr.tvz.java.dipl.mb.controller;
 
 import java.io.IOException;
 
+import hr.tvz.java.dipl.mb.glavna.Main;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
