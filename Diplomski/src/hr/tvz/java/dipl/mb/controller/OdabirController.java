@@ -6,6 +6,7 @@ import hr.tvz.java.dipl.mb.glavna.Main;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
@@ -32,6 +33,25 @@ public class OdabirController {
 			e.printStackTrace();
 		}	
 	}
+	
+	@FXML
+	private void dodavanjeKorisnika(ActionEvent event){
+		
+		 try {
+			 
+			 BorderPane noviKorisnik = FXMLLoader.load(Main.class.getResource("/fxml/fxml_UnosKorisnika.fxml"));
+			 Scene noviScene = new Scene(noviKorisnik);
+			 Stage noviStage = new Stage();
+			 noviStage.setScene(noviScene);
+			 noviStage.show();
+			 
+			 
+		} catch (IOException e) {			
+			e.printStackTrace();
+		}	
+	}
+	
+	
 		
 	
 	@FXML

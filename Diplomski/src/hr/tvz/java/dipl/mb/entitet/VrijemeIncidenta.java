@@ -2,12 +2,39 @@ package hr.tvz.java.dipl.mb.entitet;
 
 import java.time.Duration;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.time.Period;
 import java.time.format.DateTimeFormatter;
 
-public class DatumSat {
+public class VrijemeIncidenta {
 
+	
+//	LocalDateTime PocetakIncidenta = LocalDateTime.of();
+//	
+//	
+//	
+//	
+//	LocalDateTime KrajIncidenta = LocalDateTime.of();
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	private LocalDate datumPocetka; // = LocalDate.now();
 	private DateTimeFormatter formatDatuma = DateTimeFormatter.ofPattern("dd.MM.yyyy.");
 	private String formatDatumPocetka = datumPocetka.format(formatDatuma);
@@ -25,19 +52,17 @@ public class DatumSat {
 	
 	
 	
-	public DatumSat(LocalDate datumPocetka, LocalTime satPocetka) {
+	public VrijemeIncidenta(LocalDate datumPocetka, LocalTime satPocetka) {
 		//staviti localDate.now()
 		this.datumPocetka = datumPocetka;
 		this.satPocetka = satPocetka;
 	}
 
-	public DatumSat(LocalTime satZavrsetka,LocalDate datumZavrsetka) {
+	public VrijemeIncidenta(LocalTime satZavrsetka,LocalDate datumZavrsetka) {
 		//staviti localTime.now()
 		this.datumZavrsetka = datumZavrsetka;
 		this.satZavrsetka = satZavrsetka;
 	}
-
-	
 	
 	public int TrajanjeIncidenta(){
 		
