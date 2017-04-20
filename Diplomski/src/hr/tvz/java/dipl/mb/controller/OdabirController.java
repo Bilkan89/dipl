@@ -12,7 +12,7 @@ import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 
 public class OdabirController {
-
+// kontroler klasa za poèetni dashbord prikaz
 	
 	@FXML
 	private Button closeButton1;
@@ -24,35 +24,51 @@ public class OdabirController {
 	private void initialize(){}
 
 	@FXML
-	private void PregledTabliceIncidenata(ActionEvent event){
-		
+	private void PregledTabliceIncidenata(ActionEvent event){		
 		 try {		 
-			setCenterPane(FXMLLoader.load(Main.class.getResource("/fxml/fxml_PregledIncidenata.fxml")));
-			 
+			setCenterPane(FXMLLoader.load(Main.class.getResource("/fxml/fxml_PregledIncidenata.fxml")));			 
 		} catch (IOException e) {			
 			e.printStackTrace();
 		}	
 	}
 	
+	
 	@FXML
 	private void dodavanjeKorisnika(ActionEvent event){
-		
-		 try {
-			 
+		 try {		 
 			 BorderPane noviKorisnik = FXMLLoader.load(Main.class.getResource("/fxml/fxml_UnosKorisnika.fxml"));
 			 Scene noviScene = new Scene(noviKorisnik);
 			 Stage noviStage = new Stage();
 			 noviStage.setScene(noviScene);
-			 noviStage.show();
-			 
-			 
+			 noviStage.show();			 
 		} catch (IOException e) {			
 			e.printStackTrace();
 		}	
 	}
 	
 	
-		
+	@FXML
+	private void pregledKorisnika(ActionEvent event) {
+		try {
+			 BorderPane noviPane = FXMLLoader.load(Main.class.getResource("/fxml/fxml_PregledKorisnika.fxml"));
+		 Scene noviScene = new Scene(noviPane);
+		 Stage noviStage = new Stage();
+		 noviStage.setScene(noviScene);
+		 noviStage.show();	
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+
+	}		
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	@FXML
 	private void closeProgram(ActionEvent event){			

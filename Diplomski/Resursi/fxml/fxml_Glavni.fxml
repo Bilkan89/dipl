@@ -21,6 +21,7 @@
                   <items>
                         <MenuItem mnemonicParsing="false" text="Početna zaslon" />
                         <MenuItem mnemonicParsing="false" onAction="#dodavanjeKorisnika" text="Dodavanje novog korisnika..." />
+                        <MenuItem mnemonicParsing="false" onAction="#pregledKorisnika" text="Pregled korisnika..." />
                         <RadioMenuItem mnemonicParsing="false" text="Zvuk uključen/isključen" />
                         <SeparatorMenuItem mnemonicParsing="false" />
                         <MenuItem mnemonicParsing="false" text="Odjavi se" />
