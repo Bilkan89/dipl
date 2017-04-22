@@ -24,7 +24,7 @@ public class OdabirController {
 	private void initialize(){}
 
 	@FXML
-	private void PregledTabliceIncidenata(ActionEvent event){		
+	private void pregledIncidenata(ActionEvent event){		
 		 try {		 
 			setCenterPane(FXMLLoader.load(Main.class.getResource("/fxml/fxml_PregledIncidenata.fxml")));			 
 		} catch (IOException e) {			

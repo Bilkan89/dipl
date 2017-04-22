@@ -22,48 +22,28 @@
                         <MenuItem mnemonicParsing="false" text="Početna zaslon" />
                         <MenuItem mnemonicParsing="false" onAction="#dodavanjeKorisnika" text="Dodavanje novog korisnika..." />
                         <MenuItem mnemonicParsing="false" onAction="#pregledKorisnika" text="Pregled korisnika..." />
-                        <RadioMenuItem mnemonicParsing="false" text="Zvuk uključen/isključen" />
+                        <Menu mnemonicParsing="false" text="Postavke...">
+                           <items>
+                              <MenuItem mnemonicParsing="false" text="Promjena boje pozadine" />
+                              <RadioMenuItem mnemonicParsing="false" selected="true" text="Zvuk uključen/isključen" />
+                           </items>
+                        </Menu>
                         <SeparatorMenuItem mnemonicParsing="false" />
                         <MenuItem mnemonicParsing="false" text="Odjavi se" />
                     <MenuItem mnemonicParsing="false" onAction="#closeProgram" text="Izađi" />
                   </items>
                 </Menu>
-                <Menu mnemonicParsing="false" text="Evidentiranje incidenata">
+                <Menu mnemonicParsing="false" text="Incidenti">
                   <items>
-                        <MenuItem mnemonicParsing="false" onAction="#PregledTabliceIncidenata" text="Pregled tablice incidenata" />
-                    <MenuItem mnemonicParsing="false" text="Unos novog incidenta..." />
-                        <MenuItem mnemonicParsing="false" text="Unos nove tablice incidenata..." />
+                        <MenuItem mnemonicParsing="false" onAction="#pregledIncidenata" text="Pregled incidenata" />
+                    <MenuItem mnemonicParsing="false" text="Evidentiranje novog incidenta..." />
                   </items>
                 </Menu>
-                  <Menu mnemonicParsing="false" text="Praćenje incidenata">
+                  <Menu mnemonicParsing="false" text="Statistička izvješća">
                     <items>
-                      <MenuItem mnemonicParsing="false" text="Aktualni incidenti" />
-                        <MenuItem mnemonicParsing="false" text="Riješeni incidenti" />
-                    </items>
-                  </Menu>
-                  <Menu mnemonicParsing="false" text="Izvješćivanje">
-                    <items>
-                        <Menu mnemonicParsing="false" text="Tjedno izvješće">
-                           <items>
-                              <MenuItem mnemonicParsing="false" text="Poslužitelji" />
-                              <MenuItem mnemonicParsing="false" text="Telekomunikacijski uređaji" />
-                              <MenuItem mnemonicParsing="false" text="Mrežni uređaji" />
-                           </items>
-                        </Menu>
-                        <Menu mnemonicParsing="false" text="Mjesečno izvješće">
-                          <items>
-                              <MenuItem mnemonicParsing="false" text="Poslužitelji" />
-                              <MenuItem mnemonicParsing="false" text="Telekomunikacijski uređaji" />
-                              <MenuItem mnemonicParsing="false" text="Mrežni uređaji" />
-                          </items>
-                        </Menu>
-                        <Menu mnemonicParsing="false" text="Godišnje izvješće">
-                           <items>
-                              <MenuItem mnemonicParsing="false" text="Poslužitelji" />
-                              <MenuItem mnemonicParsing="false" text="Telekomunikacijski uređaji" />
-                              <MenuItem mnemonicParsing="false" text="Mrežni uređaji" />
-                           </items>
-                        </Menu>
+                        <MenuItem mnemonicParsing="false" text="Opčenito" />
+                      <MenuItem mnemonicParsing="false" text="po vrsti uređaja" />
+                        <MenuItem mnemonicParsing="false" text="po vremenu rješavanja" />
                     </items>
                   </Menu>
                 <Menu mnemonicParsing="false" text="Pomoć">
@@ -81,17 +61,14 @@
    <center>
       <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <children>
-            <Pane layoutX="12.0" layoutY="20.0" prefHeight="698.0" prefWidth="1372.0" style="-fx-background-color: #4b5f63;">
-               <effect>
-                  <DropShadow radius="43.3575" width="154.43" />
-               </effect>
+            <Pane layoutX="12.0" layoutY="20.0" prefHeight="698.0" prefWidth="1372.0">
                <children>
-                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="152.0" layoutY="34.0" prefHeight="79.0" prefWidth="843.0" text="Dobro došli, -username- danas je -povući datum,vrijeme, dan u tjednu-" textAlignment="CENTER" textFill="#c6c1c1">
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="152.0" layoutY="34.0" prefHeight="79.0" prefWidth="843.0" text="Dobro došli, -username- danas je -povući datum,vrijeme, dan u tjednu-" textAlignment="CENTER">
                      <font>
                         <Font size="25.0" />
                      </font>
                   </Label>
-                  <Label layoutX="41.0" layoutY="24.0" prefHeight="21.0" prefWidth="71.0" text="Dashbord" textFill="#b22424">
+                  <Label layoutX="41.0" layoutY="24.0" prefHeight="21.0" prefWidth="71.0" text="Dashbord">
                      <font>
                         <Font size="15.0" />
                      </font>

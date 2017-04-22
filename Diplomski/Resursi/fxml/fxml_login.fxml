@@ -9,7 +9,7 @@
 
 <AnchorPane prefHeight="239.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hr.tvz.java.dipl.mb.controller.LoginController">
    <children>
-      <Pane layoutX="8.0" layoutY="8.0" prefHeight="225.0" prefWidth="285.0" style="-fx-background-color: #ffffff;">
+      <Pane fx:id="paneNode" layoutX="8.0" layoutY="8.0" prefHeight="225.0" prefWidth="285.0" style="-fx-background-color: #ffffff;">
          <effect>
             <DropShadow />
          </effect>

@@ -6,15 +6,20 @@ import java.util.concurrent.TimeUnit;
 import hr.tvz.java.dipl.mb.glavna.Main;
 //import javafx.application.Platform;
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.Pane;
 import javafx.scene.control.Alert.AlertType;
 import javafx.stage.Stage;
 
@@ -23,6 +28,8 @@ public class LoginController {
 
 	@FXML
 	private Label hiddenLabel;
+	@FXML
+	private Pane paneNode;
 	@FXML
 	private PasswordField passField;
 	@FXML
@@ -33,12 +40,30 @@ public class LoginController {
 	String pass = "A";
 
 	//TODO: potrebno je provjeri u bazi podataka korisnièko ime i lozinku.
+	
+	
+	@FXML
+	private void initialize(){		
+		enterPritisnut(paneNode);
+		enterPritisnut(passField);
+	}
+	
+	
+//	@FXML
+//	private void enterPritisnut(KeyEvent event){
+//			
+//	}
+	
+	
+	
+	
 	@FXML
 	private void loginMetoda(ActionEvent event) throws InterruptedException{
+			
 		if(tfUsername.getText().equals(user) && passField.getText().equals(pass)){
 
 			hiddenLabel.setText("Login sucess!");
-			TimeUnit.SECONDS.sleep(1);
+			//TimeUnit.SECONDS.sleep(15);
 
 			try {
 				BorderPane layoutMoj = FXMLLoader.load(Main.class.getResource("/fxml/fxml_Glavni.fxml"));
@@ -68,8 +93,13 @@ public class LoginController {
 			alert.showAndWait();
 		}
 	}
-
-	public void closeProgram(ActionEvent event){
+	
+	
+	
+	
+	
+	@FXML
+	private void closeProgram(ActionEvent event){
 
 		//Platform.exit();   //odluciti koji je bolji naæin...
 		Stage stage =(Stage) loginButton.getScene().getWindow();
@@ -77,7 +107,16 @@ public class LoginController {
 
 	}
 	
-	
+	private void enterPritisnut(Node node){
+		node.addEventHandler(KeyEvent.KEY_PRESSED, new EventHandler<KeyEvent>(){
+			@Override
+			public void handle(KeyEvent tipka) {
+					if(tipka.getCode() == KeyCode.ENTER){
+						loginButton.fire();
+						tipka.consume();
+					}					
+			}});	
+	}
 	
 	
 	
