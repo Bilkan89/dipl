@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<BorderPane fx:id="borderPaneGlavni" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1400.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hr.tvz.java.dipl.mb.controller.OdabirController">
+<BorderPane fx:id="borderPaneGlavni" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1400.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hr.tvz.java.dipl.mb.controller.PocetniZaslonController">
    <top>
       <Pane prefHeight="35.0" prefWidth="1073.0" BorderPane.alignment="CENTER">
          <children>
@@ -19,7 +19,7 @@
               <menus>
                 <Menu mnemonicParsing="false" text="Izbornik">
                   <items>
-                        <MenuItem mnemonicParsing="false" text="Početna zaslon" />
+                        <MenuItem mnemonicParsing="false" onAction="#pocetniZaslon" text="Početni zaslon" />
                         <MenuItem mnemonicParsing="false" onAction="#dodavanjeKorisnika" text="Dodavanje novog korisnika..." />
                         <MenuItem mnemonicParsing="false" onAction="#pregledKorisnika" text="Pregled korisnika..." />
                         <Menu mnemonicParsing="false" text="Postavke...">
@@ -36,7 +36,7 @@
                 <Menu mnemonicParsing="false" text="Incidenti">
                   <items>
                         <MenuItem mnemonicParsing="false" onAction="#pregledIncidenata" text="Pregled incidenata" />
-                    <MenuItem mnemonicParsing="false" text="Evidentiranje novog incidenta..." />
+                    <MenuItem mnemonicParsing="false" onAction="#unosIncidenta" text="Evidentiranje novog incidenta..." />
                   </items>
                 </Menu>
                   <Menu mnemonicParsing="false" text="Statistička izvješća">

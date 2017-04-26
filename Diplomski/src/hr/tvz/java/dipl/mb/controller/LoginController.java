@@ -66,7 +66,7 @@ public class LoginController {
 			//TimeUnit.SECONDS.sleep(15);
 
 			try {
-				BorderPane layoutMoj = FXMLLoader.load(Main.class.getResource("/fxml/fxml_Glavni.fxml"));
+				BorderPane layoutMoj = FXMLLoader.load(Main.class.getResource("/fxml/fxml_PocetniZaslon.fxml"));
 
 				Stage secStage = new Stage();
 				Scene secScene = new Scene(layoutMoj);
