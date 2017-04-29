@@ -41,15 +41,15 @@
                 </Menu>
                   <Menu mnemonicParsing="false" text="Statistička izvješća">
                     <items>
-                        <MenuItem mnemonicParsing="false" text="Opčenito" />
-                      <MenuItem mnemonicParsing="false" text="po vrsti uređaja" />
-                        <MenuItem mnemonicParsing="false" text="po vremenu rješavanja" />
+                        <MenuItem mnemonicParsing="false" onAction="#izvjesceUkupno" text="Ukupno incidenata" />
+                      <MenuItem mnemonicParsing="false" onAction="#izvjescePoKateg" text="Incidenti po kategoriji uređaja" />
+                        <MenuItem mnemonicParsing="false" onAction="#izvjescePoRjesavanju" text="Incidenti po vremenu rješavanja" />
                     </items>
                   </Menu>
                 <Menu mnemonicParsing="false" text="Pomoć">
                   <items>
                         <MenuItem mnemonicParsing="false" text="Pomoć" />
-                    <MenuItem mnemonicParsing="false" text="O aplikaciji" />
+                    <MenuItem mnemonicParsing="false" onAction="#oAplikaciji" text="O aplikaciji" />
                   </items>
                 </Menu>
               </menus>

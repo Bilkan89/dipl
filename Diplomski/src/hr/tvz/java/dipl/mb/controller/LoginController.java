@@ -60,7 +60,7 @@ public class LoginController {
 	@FXML
 	private void loginMetoda(ActionEvent event) throws InterruptedException{
 			
-		if(tfUsername.getText().equals(user) && passField.getText().equals(pass)){
+		if(tfUsername.getText().equals("") && passField.getText().equals("")){
 
 			hiddenLabel.setText("Login sucess!");
 			//TimeUnit.SECONDS.sleep(15);
@@ -81,6 +81,10 @@ public class LoginController {
 
 //				Stage glavni = (Stage) loginButton.getScene().getWindow();
 //				glavni.close();
+				
+				
+				tfUsername.clear();
+				passField.clear();
 
 			} catch (IOException e) {
 				e.printStackTrace();
