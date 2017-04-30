@@ -41,43 +41,31 @@ public class LoginController {
 
 	//TODO: potrebno je provjeri u bazi podataka korisnièko ime i lozinku.
 	
-	
 	@FXML
 	private void initialize(){		
 		enterPritisnut(paneNode);
 		enterPritisnut(passField);
 	}
-	
-	
-//	@FXML
-//	private void enterPritisnut(KeyEvent event){
-//			
-//	}
-	
-	
-	
-	
+
 	@FXML
 	private void loginMetoda(ActionEvent event) throws InterruptedException{
 			
 		if(tfUsername.getText().equals("") && passField.getText().equals("")){
 
 			hiddenLabel.setText("Login sucess!");
-			//TimeUnit.SECONDS.sleep(15);
-
 			try {
 				BorderPane layoutMoj = FXMLLoader.load(Main.class.getResource("/fxml/fxml_PocetniZaslon.fxml"));
-
 				Stage secStage = new Stage();
 				Scene secScene = new Scene(layoutMoj);
-				//secScene.heightProperty().
 				secStage.setScene(secScene);
-          		//secStage.
+				secStage.show();
+				//secScene.heightProperty().
+				//secStage.
 				//secStage.setResizable(false);
 				//secStage.setMaximized(true);
 				//secStage.initStyle(StageStyle.UNDECORATED);
 				
-				secStage.show();
+				
 
 //				Stage glavni = (Stage) loginButton.getScene().getWindow();
 //				glavni.close();

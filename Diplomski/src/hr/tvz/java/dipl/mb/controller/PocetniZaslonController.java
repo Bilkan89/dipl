@@ -9,13 +9,17 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 public class PocetniZaslonController {
 	// kontroler klasa za poèetni dashbord prikaz
 
 	@FXML
 	private Button closeButton1;
+	@FXML
+	private Pane panePocetni;
 
 	@FXML
 	private BorderPane borderPaneGlavni;
@@ -26,7 +30,8 @@ public class PocetniZaslonController {
 
 	@FXML
 	private void pocetniZaslon(ActionEvent event) {
-		setCenterPane2("/fxml/fxml_PocetniZaslon.fxml");
+		borderPaneGlavni.setCenter(null);//da ne stavalj centar na centar, centar u centar
+		borderPaneGlavni.setCenter(panePocetni);	
 	}
 
 	@FXML
@@ -69,6 +74,12 @@ public class PocetniZaslonController {
 	private void oAplikaciji(ActionEvent event) {
 		otvoriNoviProzor("/fxml/fxml_Oaplikaciji.fxml");
 	}
+	
+	@FXML
+	private void pomocProzor(){
+		otvoriNoviProzor("/fxml/fxml_Pomoc.fxml");
+	}
+	
 
 	@FXML
 	private void closeProgram(ActionEvent event) {
@@ -83,10 +94,18 @@ public class PocetniZaslonController {
 			Scene noviScene = new Scene(novi);
 			Stage noviStage = new Stage();
 			noviStage.setScene(noviScene);
+			//noviStage.initStyle(StageStyle.UTILITY);
+			if(lokacijaFXML.equals("/fxml/fxml_Pomoc.fxml") || lokacijaFXML.equals("/fxml/fxml_Oaplikaciji.fxml")){
+				noviStage.initStyle(StageStyle.UTILITY);
+				noviStage.setResizable(false);
+				noviStage.setMaximized(false);
+			}
 			noviStage.show();
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+	
+	
 	}
 
 	private void setCenterPane2(String lokacijaFXML) {

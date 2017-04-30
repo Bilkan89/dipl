@@ -48,7 +48,7 @@
                   </Menu>
                 <Menu mnemonicParsing="false" text="Pomoć">
                   <items>
-                        <MenuItem mnemonicParsing="false" text="Pomoć" />
+                        <MenuItem mnemonicParsing="false" onAction="#pomocProzor" text="Pomoć" />
                     <MenuItem mnemonicParsing="false" onAction="#oAplikaciji" text="O aplikaciji" />
                   </items>
                 </Menu>
@@ -59,7 +59,7 @@
       </Pane>
    </top>
    <center>
-      <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+      <Pane fx:id="panePocetni" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <children>
             <Pane layoutX="12.0" layoutY="20.0" prefHeight="698.0" prefWidth="1372.0">
                <children>

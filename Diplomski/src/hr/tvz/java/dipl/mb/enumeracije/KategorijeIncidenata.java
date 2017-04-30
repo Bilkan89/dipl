@@ -3,31 +3,31 @@ package hr.tvz.java.dipl.mb.enumeracije;
 import java.util.ArrayList;
 import java.util.List;
 
-public enum VrsteIncidenata {
+public enum KategorijeIncidenata {
 
 	TELEKOMUNIKACIJSKI(1),
 	MREŽNI(2),
 	POSLUŽITELJSKI(3);
 
-	private int VrsteIncidenataId;
+	private int kategIncid;
 		
-	private VrsteIncidenata(int katIncId){
-		this.VrsteIncidenataId = katIncId;
+	private KategorijeIncidenata(int katIncId){
+		this.kategIncid = katIncId;
 	}
 	
-	public int getVrsteIncidenataId() {
-		return VrsteIncidenataId;
+	public int getKategIncid() {
+		return kategIncid;
+	}
+	
+	public void setKategIncid(int kategIncid) {
+		this.kategIncid = kategIncid;
 	}
 
-	public void setVrsteIncidenataId(int vrsteIncidenataId) {
-		VrsteIncidenataId = vrsteIncidenataId;
-	}
-
-	public static List<VrsteIncidenata> dohvatiVrijednosti(){
+	public static List<KategorijeIncidenata> dohvatiVrijednosti(){
 		
-		List<VrsteIncidenata> listaVrsteIncidenata = new ArrayList<>();
+		List<KategorijeIncidenata> listaVrsteIncidenata = new ArrayList<>();
 		
-		for(VrsteIncidenata elementi : VrsteIncidenata.values()){
+		for(KategorijeIncidenata elementi : KategorijeIncidenata.values()){
 			listaVrsteIncidenata.add(elementi);
 		}
 		

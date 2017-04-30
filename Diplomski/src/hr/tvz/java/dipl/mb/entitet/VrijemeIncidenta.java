@@ -9,32 +9,6 @@ import java.time.format.DateTimeFormatter;
 
 public class VrijemeIncidenta {
 
-	
-//	LocalDateTime PocetakIncidenta = LocalDateTime.of();
-//	
-//	
-//	
-//	
-//	LocalDateTime KrajIncidenta = LocalDateTime.of();
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	private LocalDate datumPocetka; // = LocalDate.now();
 	private DateTimeFormatter formatDatuma = DateTimeFormatter.ofPattern("dd.MM.yyyy.");
 	private String formatDatumPocetka = datumPocetka.format(formatDatuma);

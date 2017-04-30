@@ -5,9 +5,9 @@ import java.util.List;
 
 public enum PrioritetiIncidenta {
 
-	KRITIÈAN(1),
-	VISOKI(2),
-	NISKI(3);
+	Visoki(1),
+	Srednji(2),
+	Niski(3);
 	
 	private int prioritetiIncidentaId;
 	
