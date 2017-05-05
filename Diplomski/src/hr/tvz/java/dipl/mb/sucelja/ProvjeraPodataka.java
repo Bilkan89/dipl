@@ -23,11 +23,11 @@ public interface ProvjeraPodataka {
 	}
 		
 		
-	public default void provjeraBrojevi(String zaProvjeru) throws RegexException {
+	public default void provjeraBrojevi(int zaProvjeru) throws RegexException {
 		
 		//pronaði jedino brojeve koji se pojavljuju na poèetku jedan ili više puta
 		Pattern patternBrojevi = Pattern.compile("^(\\d+)$");  
-		Matcher matcherBr = patternBrojevi.matcher(zaProvjeru);
+		Matcher matcherBr = patternBrojevi.matcher(String.valueOf(zaProvjeru));
 		
 		if(!matcherBr.find()){
 			throw new RegexException();

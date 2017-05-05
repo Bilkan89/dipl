@@ -7,18 +7,18 @@ public class Adresa implements ProvjeraPodataka{
 	private String drzava;
 	private String grad;
 	private String ulica;
-	private String kucniBroj; //TODO: implementirati regexe, kucnibroj moze biti 22a 22b..
+	private int kucniBroj; //TODO: implementirati regexe, kucnibroj moze biti 22a 22b..
 	private int idAdresa;
 	
-	public Adresa(String drzava, String grad, String ulica, String kucniBroj) {
+	public Adresa(String drzava, String grad, String ulica, int kucniBroj) {
 		this.drzava = drzava;
 		this.grad = grad;
 		this.ulica = ulica;
 		this.kucniBroj = kucniBroj;		
-		provjeraSlova(drzava);
-		provjeraSlova(grad);
-		provjeraSlova(ulica);
-		provjeraBrojevi(kucniBroj);
+//		provjeraSlova(drzava);
+//		provjeraSlova(grad);
+//		provjeraSlova(ulica);
+//		provjeraBrojevi(kucniBroj);
 	}	
 
 
@@ -67,7 +67,7 @@ public class Adresa implements ProvjeraPodataka{
 	/**
 	 * @return the kucniBroj
 	 */
-	public String getKucniBroj() {
+	public int getKucniBroj() {
 		return kucniBroj;
 	}
 	

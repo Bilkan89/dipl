@@ -10,7 +10,7 @@ public class KomunikacijaSaBazom {
 
 		private static final String DATABASE_PROPERTIES_FILE = "Resursi/DataBaseProperties/app.properties";
 
-		protected static Connection connectingToDataBase() throws Exception {
+		public static Connection konekcijaDB() throws Exception {
 
 			Connection vezaSaBazom = null;
 			Properties svojstva = new Properties();
@@ -22,13 +22,16 @@ public class KomunikacijaSaBazom {
 			String korisnickoIme = svojstva.getProperty("korisnickoIme");
 			String lozinka = svojstva.getProperty("lozinka");
 
+			
 			vezaSaBazom = DriverManager.getConnection(urlBaze, korisnickoIme, lozinka);
 			return vezaSaBazom;
 
 		}
 
-		protected static void closingConnectionToDataBase(Connection vezaSaBazom) throws SQLException {
-			vezaSaBazom.close();
+		public static void zatvoriKonekciju(Connection vezaSaBazom) throws SQLException{
+			vezaSaBazom.close();			
 		}
+
+		
 }
 

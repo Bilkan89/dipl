@@ -1,5 +1,10 @@
 package hr.tvz.java.dipl.mb.entitet;
 
+import java.sql.Date;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.time.format.DateTimeFormatterBuilder;
+
 import hr.tvz.java.dipl.mb.sucelja.ProvjeraPodataka;
 
 public class Korisnik implements ProvjeraPodataka{
@@ -12,11 +17,13 @@ public class Korisnik implements ProvjeraPodataka{
 	private String korisnickaLozinka;
 	private String napomena;
 	
+	private Date datumKreiranja;
+	
 	private boolean pravoPristupa;
 	private int idKorisnika;
 	
 	public Korisnik(String ime, String prezime, Adresa adresaKorisnika, int kontaktBroj, String korisnickoIme,
-			String korisnickaLozinka) {
+			String korisnickaLozinka,String napomena, Date datumKreiranja) {
 		
 		this.ime = ime;
 		this.prezime = prezime;
@@ -24,9 +31,13 @@ public class Korisnik implements ProvjeraPodataka{
 		this.kontaktBroj = kontaktBroj;
 		this.korisnickoIme = korisnickoIme;
 		this.korisnickaLozinka = korisnickaLozinka;
+		this.napomena = napomena;
+		this.datumKreiranja = datumKreiranja;
 		this.pravoPristupa = false; // svakog novog korisnika admin mora odobriti
-		provjeraSlova(ime);
-		provjeraSlova(prezime);				
+	    //provjeraSlova(ime);
+		//provjeraSlova(prezime);	
+		
+		//this.datumKreiranja = LocalDate.now().format(new DateTimeFormatter.ofPattern("yyyy MM dd"));
 		
 	}
 
@@ -86,7 +97,9 @@ public class Korisnik implements ProvjeraPodataka{
 		return korisnickaLozinka;
 	}
 	
-		
+	public Date getDatumKreiranja() {
+		return datumKreiranja;
+	}	
 	
 	
 }
